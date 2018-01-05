@@ -49,9 +49,16 @@ LESSONS LEARNED
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
+2018-01-04
+--------------------------------------------------------------
+Kerwin Chen :: Worked together to determine necessary methods for UML diagram, introduced algo to update plant status
+Raymond Wu  :: Worked together to determine necessary methods for UML diagram, updated project proposal, uploaded UML diagram
+Jerry Ye    :: Worked together to determine necessary methods for UML diagram, proposed random element
+==============================================================
+
 2018-01-03
 --------------------------------------------------------------
 Kerwin Chen :: Worked together to come up with and finalize ideas on our proposal
-Raymond Wu :: Worked together to come up with and finalize ideas on our proposal
-Jerry Ye :: Worked together to come up with and finalize ideas on our proposal, Created basic OOP heiarchy flow chart, Created this devlog! 
+Raymond Wu  :: Worked together to come up with and finalize ideas on our proposal
+Jerry Ye    :: Worked together to come up with and finalize ideas on our proposal, created basic OOP hierarchy flow chart, created this devlog! 
 ==============================================================
