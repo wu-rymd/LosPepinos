@@ -44,17 +44,25 @@ LESSONS LEARNED
  \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
   \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
    \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
-    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+    \____/_/ \_____\/ \___/_/   \_____\/ \_____\/ \_____\/ 
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+2018-01-05
+--------------------------------------------------------------
+Kerwin Chen :: Started working on Cucumber.java
+Raymond Wu  :: Started working on Cucumber.java; Updated UML to reflect farm 2D array holding Objects, remove redundant methods
+Jerry Ye    :: Started working on Cucumber.java
+==============================================================
 
 
 2018-01-04
 --------------------------------------------------------------
 Kerwin Chen :: Worked together to determine necessary methods for UML diagram, introduced algo to update plant status
 Raymond Wu  :: Worked together to determine necessary methods for UML diagram, updated project proposal, uploaded UML diagram
-Jerry Ye    :: Worked together to determine necessary methods for UML diagram, proposed random element
+Jerry Ye    :: Worked together to determine necessary methods for UML diagram, proposed psuedo-random element to game
 ==============================================================
+
 
 2018-01-03
 --------------------------------------------------------------
