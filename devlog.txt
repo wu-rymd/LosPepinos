@@ -22,7 +22,8 @@ maybe some of these will move into the Obs.Ovrcm section...
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<wow! oo! etc!...>
+- You cannot hold the name of a class in a variable.
+    When you try to use a variable to hold a class, the compiler will treat the variable itself as the class name.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,6 +48,14 @@ LESSONS LEARNED
     \____/_/ \_____\/ \___/_/   \_____\/ \_____\/ \_____\/ 
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+2018-01-06
+--------------------------------------------------------------
+Kerwin Chen :: Finished Cucumber.java, determined that plant() in Cucumber class and subclasses is unnecessary; proposed idea to hold class in variable
+Raymond Wu  :: Finished Cucumber.java, determined that plant() in Cucumber class and subclasses is unnecessary; determined cannot hold class in variable
+Jerry Ye    :: Determined Cucumber class will not be abstract, "extend" keyword will ensure inheritance in Cucumber subclasses
+==============================================================
+
 
 2018-01-05
 --------------------------------------------------------------
