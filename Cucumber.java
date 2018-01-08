@@ -17,7 +17,7 @@ The int variable value will hold the value of the Cucumber. This is what the Cuc
 */
 
 
-public class Cucumber
+public abstract class Cucumber
 {
 
     private String name;
@@ -41,5 +41,7 @@ public class Cucumber
     
     public String toString()
     { return name + getRipeDuration(); }
+
+    public abstract String about();
 }
     
