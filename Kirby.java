@@ -5,8 +5,8 @@ public class Kirby extends Cucumber
     {
 	super();
 	name = "Kir";
-	nutrition = 20;
-	ripeDuration = 5;
+	nutrition = 10;
+	ripeDuration = 3;
     }
     public String about()
     {return "";}
