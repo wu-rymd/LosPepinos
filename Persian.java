@@ -5,8 +5,8 @@ public class Persian extends Cucumber
     {
 	super();
 	name = "Per";
-	nutrition = 20;
-	ripeDuration = 5;
+	nutrition = 15;
+	ripeDuration = 4;
     }
     public String about()
     {return "";}
