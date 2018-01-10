@@ -1,0 +1,24 @@
+LosPepinos (Kerwin Chen, Raymond Wu, Jerry Ye)
+APCS1 pd1
+To-Do List
+2018-01-09
+
+1. Ensuring functionality
+  a. Make sure the core of the game runs. (Our project must comply with the flowchart, and there is no error when Woo.java is compiled and run.)
+  b. Make sure to follow our UML diagram and flowchart when developing.
+  c. Add descriptive comments to our code while developing.
+
+2. Increasing quality of code
+  a. Look to increase the efficiency of algorithms.
+  b. Clarify comments made in code.
+
+3. Enhance user interaction
+  a. Add a short guide at the beginning to teach user how to play the game.
+  b. Ensure adequate user guidance in user input prompts.
+  c. Add x-coordinates and y-coordinates on sides of 2D array to facilitate user.
+  d. Add a "See more" option when selecting seeds to buy that includes information about each type of seed.
+
+4. Add elements of randomness
+  a. User starts out with a random amount of money, within a predetermined range.
+  b. Include random chances of events occurring such as raining, robbery, etc.
+
