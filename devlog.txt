@@ -49,6 +49,23 @@ LESSONS LEARNED
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+
+2018-01-09
+--------------------------------------------------------------
+Kerwin Chen :: Worked together to smooth out intricacies represented in flowchart, worked together to put together to-do list
+Raymond Wu  :: Worked together to smooth out intricacies represented in flowchart, worked together to put together to-do list, added descriptive comments to Cucumber subclasses
+Jerry Ye    :: Worked together to smooth out intricacies represented in flowchart, worked together to put together to-do list
+==============================================================
+
+
+2018-01-08
+--------------------------------------------------------------
+Kerwin Chen :: Worked together on Cucumber subclasses and pushed subclasses to GitHub
+Raymond Wu  :: Worked together on Cucumber subclasses and added descriptive comments
+Jerry Ye    :: Worked together on Cucumber subclasses
+==============================================================
+
+
 2018-01-06
 --------------------------------------------------------------
 Kerwin Chen :: Finished Cucumber.java, determined that plant() in Cucumber class and subclasses is unnecessary; proposed idea to hold class in variable
