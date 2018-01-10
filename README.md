@@ -20,6 +20,7 @@ The game must end when the user has no money left or 15 weeks have elapsed.
 
 # Instructions
 1. Run Woo.java in a command-line interface.
+   * ``$ javac Woo.java``
+   * ``$ java Woo.java``
 2. Input the user character's name.
-3. Follow user input prompts on the screen.
-
+3. Follow user input prompts on the command-line interface.
