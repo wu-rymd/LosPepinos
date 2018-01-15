@@ -15,36 +15,16 @@ public class User
 	name = n;
     }
 
-    public void plant(int xcor, int ycor, int selection)
-    {
-	String Sselection = ""+selection;
-	if (Sselection == "1"){
-	    English eng = new English();
-	    Farm.plant(xcor, ycor, eng);
-	}
-	else if (Sselection == "2"){
-	    Kirby kir = new Kirby();
-	    Farm.plant(xcor, ycor, kir);
-	}
-
-	else if (Sselection == "3"){
-	    Persian per = new Persian();
-	    Farm.plant(xcor, ycor, per);
-	}
-
-	else if (Sselection == "4"){
-	    Armenian arm = new Armenian();
-	    Farm.plant(xcor, ycor, arm);
-	}
-
-	else if (Sselection == "5"){
-	    Japanese jpn = new Japanese();
-	    Farm.plant(xcor, ycor, jpn);
-	}
-	    
-    }
-    public static void main(String[] args){
-	User lim = new User();
-	System.out.println(lim.plant(1,2,1));
-    }
+  public int getMoney(){
+      return money;
+  }
+  public void setMoney(int n){
+    money = n;
+  }
+  public int getName(){
+    return name;
+  }
+  public String setName(String s){
+    name = s; 
+  }
 }
