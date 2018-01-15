@@ -8,8 +8,14 @@ public class Farm extends Matrix{
   public Object getCucumber(int r, int c){ //calls on Matrix's get method to implement GetCucumber
     super.get(r,c);
   }
-  public void setCucumber(int r, int c, Object O){//calls on Matrix's set method to implement setCucumber
+  public void plant(int r, int c, Object O){//calls on Matrix's set method to implement setCucumber
     super.set(r, c, O);
+  }
+  public int harvest(int r, int c){
+    String s = new String("O");
+    int retMoney = getCucumber(r,c).getValue();
+    super.set(r,c,s);
+    return retMoney;
   }
 
 }
