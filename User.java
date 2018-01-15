@@ -21,7 +21,7 @@ public class User
   public void setMoney(int n){
     money = n;
   }
-  public int getName(){
+  public String getName(){
     return name;
   }
   public String setName(String s){
