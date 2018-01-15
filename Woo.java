@@ -277,7 +277,7 @@ public class Woo
     public static void main(String[] args)
     {
 	User u = new User();
-	Farm f = new Farm();
+	Farm f = new Farm(5);
 	
 	startGame();
 	while ( weeksElapsed < 15 &&
