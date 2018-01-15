@@ -14,9 +14,6 @@ public class Armenian extends Cucumber
 	nutrition = 20;
 	ripeDuration = 5;
     }
-    
-    public String about()
-    { return ""; }
 
 } // end class Armenian
 	

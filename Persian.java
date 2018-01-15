@@ -14,9 +14,6 @@ public class Persian extends Cucumber
 	nutrition = 15;
 	ripeDuration = 4;
     }
-    
-    public String about()
-    { return ""; }
 
 } // end Persian class
 	
