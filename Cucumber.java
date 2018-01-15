@@ -20,8 +20,8 @@ The int variable value will hold the value of the Cucumber. This is what the Cuc
 public class Cucumber
 {
 
-    private String name;
-    private int nutrition, ripeDuration, value;
+    public  String name;
+    public int nutrition, ripeDuration, value;
     
     public void grow()
     {
@@ -33,7 +33,7 @@ public class Cucumber
 	if (value <= 0)
 	    value = 0;
     }
-	
+    /*	
     public int getNutrition()
     { return nutrition; }
 
@@ -42,9 +42,9 @@ public class Cucumber
 
     public int getValue()
     { return value; }
-    
+    */
     public String toString()
-    { return name + getValue(); }
-
+    { return name + value; }
+    
 }
     

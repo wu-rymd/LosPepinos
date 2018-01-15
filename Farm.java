@@ -33,7 +33,7 @@ public class Farm extends Matrix{
       }
     String s = new String("O");
     Cucumber C = (Cucumber)getCucumber(r,c);
-    int retMoney = C.getValue();
+    int retMoney = C.value;
     super.set(r,c,s);
     return retMoney;
   }

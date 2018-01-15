@@ -24,7 +24,7 @@ public class User
   public String getName(){
     return name;
   }
-  public String setName(String s){
+  public void setName(String s){
     name = s; 
   }
 }
