@@ -41,21 +41,21 @@ public class Matrix
 
 
     //return size of this matrix, where size is 1 dimension
-    private int size() 
+    public int size() 
     {
 	return _matrix.length;
     }
 
 
     //return the item at the specified row & column   
-    private Object get( int r, int c ) 
+    public Object get( int r, int c ) 
     {
 	return _matrix[r-1][c-1];
     }
 
 
     //return true if this matrix is empty, false otherwise
-    private boolean isEmpty( int r, int c ) 
+    public boolean isEmpty( int r, int c ) 
     {
 	return get(r,c) == null;
     }
@@ -63,7 +63,7 @@ public class Matrix
 
     //overwrite item at specified row and column with newVal
     //return old value
-    private Object set( int r, int c, Object newVal ) 
+    public Object set( int r, int c, Object newVal ) 
     {
 	Object retVal = _matrix[r-1][c-1];
 	_matrix[r-1][c-1] = newVal;
