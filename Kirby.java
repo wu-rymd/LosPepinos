@@ -14,9 +14,6 @@ public class Kirby extends Cucumber
 	nutrition = 10;
 	ripeDuration = 3;
     }
-    
-    public String about()
-    { return ""; }
 
 } // end Kirby class
 	

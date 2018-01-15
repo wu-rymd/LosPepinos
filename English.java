@@ -14,9 +14,6 @@ public class English extends Cucumber
 	nutrition = 5;
 	ripeDuration = 2;
     }
-    
-    public String about()
-    { return ""; }
 
 } // end class English
 	

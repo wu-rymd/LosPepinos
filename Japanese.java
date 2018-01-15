@@ -14,8 +14,5 @@ public class Japanese extends Cucumber
 	nutrition = 25;
 	ripeDuration = 6;
     }
-    
-    public String about()
-    { return ""; }
 
 } // end class Japanese
