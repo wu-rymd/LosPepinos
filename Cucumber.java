@@ -30,7 +30,7 @@ public class Cucumber
 	    value += nutrition;
 	else
 	    value -= nutrition;
-	if (value <= 0)
+	if (value < 0)
 	    value = 0;
     }
     /*	

@@ -39,7 +39,7 @@ public class Woo
 	s += "\t1: Buy a seed and plant it!\n";
 	s += "\t2: Harvest a cucumber!\n";
 	s += "\t3: Buy a plot of land for $100!\n";
-	s += "\t4: Start next day!\n";
+	s += "\t4: Start next week!\n";
 
 	System.out.println(s);
 		
@@ -56,7 +56,18 @@ public class Woo
 	    buyLand();
 	
 	else if (selection == 4)
-	    weeksElapsed++;
+	    {
+		weeksElapsed++;
+		for ( int r = 1; r < f.size()+1; r++)  // Matrix.java converts from matrix index --> array index
+		    {
+			for ( int c = 1; c < f.size()+1; c++)
+			    {
+				if ( f.getCucumber(r,c) != "X" && f.getCucumber(r,c) != "O" )
+				    ((Cucumber) f.getCucumber(r,c)).grow();
+
+			    } // end inner for-loop
+		    } // end outer for-loop
+	    }
 	// increment weeksElapsed, and back to main menu
 
 	else
@@ -141,7 +152,7 @@ public class Woo
 		System.out.println(s);
 		ycor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
-		if ( f.getCucumber(xcor, ycor) == "x")
+		if ( f.getCucumber(xcor, ycor) == "X")
 		    {
 			System.out.println("\nYou don't own land here! $50 penalty!");
 			u.setMoney( u.getMoney() - 50);
@@ -223,7 +234,7 @@ public class Woo
         System.out.println( "\tis in which column?");
 	ycor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
-	if ( f.getCucumber(xcor, ycor) == "x" || f.getCucumber(xcor, ycor) == "o")
+	if ( f.getCucumber(xcor, ycor) == "X" || f.getCucumber(xcor, ycor) == "O")
 	    System.out.println("\nYou don't have anything planted here!");   // back to main menu, w/o incrementing weeksElapsed
 
 	else
@@ -248,7 +259,7 @@ public class Woo
 		ycor = Keyboard.readInt();
 		ycor -= 1; // convert from matrix index to array index
 
-		if ( !(f.getCucumber(xcor, ycor) == "x") )
+		if ( !(f.getCucumber(xcor, ycor) == "X") )
 		    {
 			if ( xcor > f.size() || ycor > f.size() )
 			    System.out.println( "\nThis plot of land does not exist in the world!");
