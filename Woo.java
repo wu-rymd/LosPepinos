@@ -183,7 +183,8 @@ public class Woo
 		System.out.println(s);
 		ycor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
-		if ( xcor > f.size() || ycor > f.size() )  // if selected plot of land out of bounds
+		if ( xcor > f.size() || ycor > f.size() ||
+		     xcor < 0        || ycor < 0            )  // if selected plot of land out of bounds
 		    {
 			System.out.println( "\nThis plot of land does not exist in the world!");
 			return;   // back to main menu, without incrementing weeksElapsed
@@ -288,7 +289,8 @@ public class Woo
 	ycor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
 	
-	if ( xcor > f.size() || ycor > f.size() )
+	if ( xcor > f.size() || ycor > f.size() ||
+	     xcor < 0        || ycor < 0             )   // chosen plot in bounds?
 	    System.out.println( "\nThis plot of land does not exist in the world!");
 	// back to main menu, without incrementing weeksElapsed
 	
@@ -321,7 +323,8 @@ public class Woo
 		System.out.println( "\tis in which column?");
 		ycor = Keyboard.readInt(); // converting from matrix index to array index handled in Matrix.java
 		
-		if ( xcor > f.size() || ycor > f.size() )
+		if ( xcor > f.size() || ycor > f.size() ||
+		     xcor < 0        || xcor < 0           )
 		    System.out.println( "\nThis plot of land does not exist in the world!");
 		// back to main menu, without incrementing weeksElapsed
 
