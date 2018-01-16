@@ -255,8 +255,13 @@ public class Woo
         System.out.println( "\tis in which column?");
 	ycor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
-	if ( f.getCucumber(xcor, ycor).equals("X") || f.getCucumber(xcor, ycor).equals("O") )
-	    System.out.println("\nYou don't have anything planted here!");   // back to main menu, w/o incrementing weeksElapsed
+	if ( xcor > f.size() || ycor > f.size() )
+	    System.out.println( "\nThis plot of land does not exist in the world!");
+	// back to main menu, without incrementing weeksElapsed
+	
+	else if ( f.getCucumber(xcor, ycor).equals("X") || f.getCucumber(xcor, ycor).equals("O") )
+	    System.out.println("\nYou don't have anything planted here!");
+	// back to main menu, w/o incrementing weeksElapsed
 
 	else
 	    {
@@ -285,10 +290,12 @@ public class Woo
 		
 		if ( xcor > f.size() || ycor > f.size() )
 		    System.out.println( "\nThis plot of land does not exist in the world!");
+		// back to main menu, without incrementing weeksElapsed
 
 		
 		else if ( !(f.getCucumber(xcor, ycor).equals("X")) )   // xcor, ycor within bounds of array
 		    System.out.println( "\nYou already own this plot of land!");
+		// back to main menu, without incrementing weeksElapsed
 
 		else
 		    {
