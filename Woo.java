@@ -62,7 +62,8 @@ public class Woo
 		    {
 			for ( int c = 1; c < f.size()+1; c++)
 			    {
-				if ( f.getCucumber(r,c) != "X" && f.getCucumber(r,c) != "O" )
+				if ( !( f.getCucumber(r,c).equals("X") ) &&      // only grow Cucumbers
+				     !( f.getCucumber(r,c).equals("O") )      )
 				    ((Cucumber) f.getCucumber(r,c)).grow();
 
 			    } // end inner for-loop
