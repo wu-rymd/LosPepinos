@@ -135,13 +135,11 @@ public class Woo
 		
 		s = "\nIn which row would you like to plant?";
 		System.out.println(s);
-		xcor = Keyboard.readInt();
-		xcor -= 1; // convert from matrix index to array index
+		xcor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
 		s = "In which column would you like to plant?";
 		System.out.println(s);
-		ycor = Keyboard.readInt();
-		ycor -= 1; // convert from matrix index to array index
+		ycor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
 		if ( f.getCucumber(xcor, ycor) == "x")
 		    {
@@ -220,12 +218,10 @@ public class Woo
 	
 	System.out.println( "\nThe plant you would like to harvest...");
 	System.out.println( "\tis in which row?");
-	xcor = Keyboard.readInt();
-	xcor -= 1; // convert from matrix index to array index
+	xcor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
         System.out.println( "\tis in which column?");
-	ycor = Keyboard.readInt();
-	ycor -= 1; // convert from matrix index to array index
+	ycor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
 	if ( f.getCucumber(xcor, ycor) == "x" || f.getCucumber(xcor, ycor) == "o")
 	    System.out.println("\nYou don't have anything planted here!");   // back to main menu, w/o incrementing weeksElapsed
