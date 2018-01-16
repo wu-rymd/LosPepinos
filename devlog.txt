@@ -50,6 +50,16 @@ LESSONS LEARNED
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
+
+2018-01-15
+--------------------------------------------------------------
+Kerwin Chen :: Collaborated on finalizing core game, modified Cucumber.java and its subclasses while others supervised, found errors
+Raymond Wu  :: Collaborated on finalizing core game, modified Woo.java while others supervised, debugging errors, cleanup work to solidify project
+Jerry Ye    :: Collaborated on finalizing core game, modified Farm.java, User.java while others supervised, debugging support
+==============================================================
+
+
+
 2018-01-12
 --------------------------------------------------------------
 Kerwin Chen :: Prepared for success by doing problems from fall 2013 APCS final
