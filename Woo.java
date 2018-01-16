@@ -31,7 +31,7 @@ public class Woo
 	String s;
 	int selection;
 
-	System.out.println("\n===================================\n");
+	System.out.println("\n\n===================================\n\n");
 	
         printStats();
 		
@@ -153,14 +153,24 @@ public class Woo
 		System.out.println(s);
 		ycor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
-		if ( f.getCucumber(xcor, ycor) == "X")
+		if ( f.getCucumber(xcor, ycor).equals("X") )
 		    {
 			System.out.println("\nYou don't own land here! $50 penalty!");
 			u.setMoney( u.getMoney() - 50);
 			System.out.println("\nYou now have $" + u.getMoney() );
 			return;   // back to main menu, without incrementing weeksElapsed
 		    }
-	
+
+		// if you arrive here, f.getCucumber(xcor, ycor) is not "X"
+		// if also not "O", means cucumber is planted in selected plot
+		else if ( !( f.getCucumber(xcor, ycor).equals("O") )    )
+		    {
+			System.out.println("\nYou already planted here!");
+			return;   // back to main menu, without incrementing weeksElapsed
+		    }
+
+
+		
 		if (selection == 1)
 		    {
 			Cucumber c = new Armenian();
@@ -235,11 +245,16 @@ public class Woo
         System.out.println( "\tis in which column?");
 	ycor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
-	if ( f.getCucumber(xcor, ycor) == "X" || f.getCucumber(xcor, ycor) == "O")
+	if ( f.getCucumber(xcor, ycor).equals("X") || f.getCucumber(xcor, ycor).equals("O") )
 	    System.out.println("\nYou don't have anything planted here!");   // back to main menu, w/o incrementing weeksElapsed
 
 	else
-	    f.harvest(xcor, ycor);
+	    {
+		u.setMoney( u.getMoney() + f.harvest(xcor, ycor) );
+		// harvest() returns the value of plant being harvested
+		// resets plot to "O" and adds money to user's bank
+	    }
+	
 	
     } // end harvest method
 
@@ -260,7 +275,7 @@ public class Woo
 		ycor = Keyboard.readInt();
 		ycor -= 1; // convert from matrix index to array index
 
-		if ( !(f.getCucumber(xcor, ycor) == "X") )
+		if ( !(f.getCucumber(xcor, ycor).equals("X")) )
 		    {
 			if ( xcor > f.size() || ycor > f.size() )
 			    System.out.println( "\nThis plot of land does not exist in the world!");
