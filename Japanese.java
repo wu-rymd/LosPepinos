@@ -10,7 +10,7 @@ public class Japanese extends Cucumber
 
     public Japanese()  // default constructor
     {
-	name = "Jpn";
+	name = "Jp";
 	nutrition = 25;
 	ripeDuration = 6;
     }

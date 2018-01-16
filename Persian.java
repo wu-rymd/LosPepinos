@@ -10,7 +10,7 @@ public class Persian extends Cucumber
     
     public Persian()  // default constructor
     {
-	name = "Per";
+	name = "Pr";
 	nutrition = 15;
 	ripeDuration = 4;
     }

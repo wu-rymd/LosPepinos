@@ -10,7 +10,7 @@ public class English extends Cucumber
     
     public English()  // default constructor
     {
-	name = "Eng";
+	name = "En";
 	nutrition = 5;
 	ripeDuration = 2;
     }

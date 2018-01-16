@@ -10,7 +10,7 @@ public class Armenian extends Cucumber
     
     public Armenian()  // default constructor
     {
-	name = "Arm";
+	name = "Ar";
 	nutrition = 20;
 	ripeDuration = 5;
     }

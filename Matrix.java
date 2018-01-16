@@ -79,7 +79,7 @@ public class Matrix
 	for( int i =0; i < size(); i++ ) {
 	    foo += "| ";
 	    for( int j=0; j < size(); j++ ) {
-		foo += _matrix[i][j] + "\t"; //get(i+1,j+1)
+		foo += _matrix[i][j] + "\t  "; //get(i+1,j+1)
 	    }
 	    foo += "|\n";
 	}

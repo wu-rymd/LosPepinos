@@ -10,7 +10,7 @@ public class Kirby extends Cucumber
     
     public Kirby()  // default constructor
     {
-	name = "Kir";
+	name = "Kr";
 	nutrition = 10;
 	ripeDuration = 3;
     }

@@ -15,12 +15,36 @@ public class Woo
     public static void startGame()
     {
 	String s;
+	
 	s = "~~~ Welcome to Cucumber Farm! ~~~\n";
 	s += "\nWhat is your name, dearest Farmer?";
 	System.out.println(s);
 	
 	name = Keyboard.readString();
 	System.out.println("\nHello, " + name + ".\n");
+
+	s = "\n\n~~~ HOW TO PLAY ~~~";
+	s += "\nYou are the owner of a Cucumber Farm.";
+	s += "\nTo begin, you will be given $50, and a 2x2 farm";
+	s += "\nThe game ends when you have no money, or 15 weeks have elapsed.";
+	s += "\nThe goal of the game is to make as much money as possible in 15 weeks.";
+
+	s += "\n\nYou can buy seeds to plant on your own farm.";
+	s += "\nUnplanted land that you own are marked with \"O\".";
+	s += "\nLand you do not own are marked with \"X\". Plant here = $50 penalty!";
+
+	s += "\n\nMore info on types of cucumbers by selecting See more.";
+	s += "\nCucumbers increase by an increment designated as \"nutrition\".";
+	s += "\nThey reach their maximum value after their \"ripe duration\", in weeks,";
+	s += "\n   and begin rotting at the same rate afterward.";
+
+	s += "\n\nYou may also choose to harvest (sell) your cucumber,";
+	s += "\n   buy a plot of land for $100,";
+	s += "\n   or advance to the next week to watch your cucumbers grow.";
+
+	s += "\n\nGood luck.";
+
+	System.out.println(s);
 	
     } // end startGame method
 
