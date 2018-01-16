@@ -1,5 +1,4 @@
 import cs1.Keyboard;
-import java.util.Scanner;
 
 public class Woo
 {
@@ -17,10 +16,11 @@ public class Woo
     {
 	String s;
 	s = "~~~ Welcome to Cucumber Farm! ~~~\n";
-
-	s += "\nWhat is your name, dearest Farmer? ";
+	s += "\nWhat is your name, dearest Farmer?";
+	System.out.println(s);
+	
 	name = Keyboard.readString();
-	System.out.println("Hello, " + name);
+	System.out.println("\nHello, " + name + ".\n");
 	
     } // end startGame method
 
@@ -31,16 +31,16 @@ public class Woo
 	String s;
 	int selection;
 
+	System.out.println("\n===================================\n");
+	
         printStats();
 		
-	s =  "\n" + name + ", what is your next step?";
+	s =  "\n" + name + ", what is your next step?\n";
 	s += "\t1: Buy a seed and plant it!\n";
 	s += "\t2: Harvest a cucumber!\n";
-	s += "\t3: Buy a plot of land!\n";
+	s += "\t3: Buy a plot of land for $100!\n";
 	s += "\t4: Start next day!\n";
 
-	s += "\nYou have $" + u.getMoney() + " left.";
-	s += "\nThere are " + (15 - weeksElapsed) + " weeks left in the game.";
 	System.out.println(s);
 		
 	selection = Keyboard.readInt();
@@ -108,7 +108,7 @@ public class Woo
 	String s, cucumberInfo;
 	int selection, xcor, ycor;
 
-	s =  "\n" + name + "What type of cucumber would you like to plant?";
+	s =  "\n" + name + ", what type of cucumber would you like to plant?\n";
 	s += "\t1: Armenian\n";
 	s += "\t2: English\n";
 	s += "\t3: Japanese\n";
@@ -123,12 +123,22 @@ public class Woo
 	if (selection == 1 || selection == 2 || selection == 3 ||
 	    selection == 4 || selection == 5)
 	    {
-		s = "\nIn which row would you like to plant?\n";
+		if ( (selection == 1 && u.getMoney() < 30) ||
+		     (selection == 2 && u.getMoney() < 3 ) ||
+		     (selection == 3 && u.getMoney() < 50) ||
+		     (selection == 4 && u.getMoney() < 10) ||
+		     (selection == 5 && u.getMoney() < 20)     )
+		    {
+			System.out.println("You don't have enough money!");
+			return;  // back to main menu, without incrementing weeksElapsed
+		    }
+		
+		s = "\nIn which row would you like to plant?";
 		System.out.println(s);
 		xcor = Keyboard.readInt();
 		xcor -= 1; // convert from matrix index to array index
 
-		s = "\nIn which column would you like to plant?\n";
+		s = "In which column would you like to plant?";
 		System.out.println(s);
 		ycor = Keyboard.readInt();
 		ycor -= 1; // convert from matrix index to array index
@@ -147,7 +157,7 @@ public class Woo
 			f.plant(xcor, ycor, c);
 
 			u.setMoney( u.getMoney() - 30);
-			System.out.println("\nThat cost you $30. You now have $" + u.getMoney() );
+			System.out.println("\nThat cost you $30. You now have $" + u.getMoney() + ".");
 		    }
 
 		else if (selection == 2)
@@ -156,7 +166,7 @@ public class Woo
 			f.plant(xcor, ycor, c);
 
 			u.setMoney( u.getMoney() - 3);
-			System.out.println("\nThat cost you $3. You now have $" + u.getMoney() );
+			System.out.println("\nThat cost you $3. You now have $" + u.getMoney() + ".");
 		    }
 
 		else if (selection == 3)
@@ -165,7 +175,7 @@ public class Woo
 			f.plant(xcor, ycor, c);
 
 			u.setMoney( u.getMoney() - 50);
-			System.out.println("\nThat cost you $50. You now have $" + u.getMoney() );
+			System.out.println("\nThat cost you $50. You now have $" + u.getMoney() + ".");
 		    }
 
 		else if (selection == 4)
@@ -174,7 +184,7 @@ public class Woo
 			f.plant(xcor, ycor, c);
 
 			u.setMoney( u.getMoney() - 10);
-			System.out.println("\nThat cost you $10. You now have $" + u.getMoney() );
+			System.out.println("\nThat cost you $10. You now have $" + u.getMoney() + ".");
 		    }
 
 		else if (selection == 5)
@@ -183,7 +193,7 @@ public class Woo
 			f.plant(xcor, ycor, c);
 
 			u.setMoney( u.getMoney() - 20);
-			System.out.println("\nThat cost you $20. You now have $" + u.getMoney() );
+			System.out.println("\nThat cost you $20. You now have $" + u.getMoney() + ".");
 		    }
 
 	    } // end selections 1-5 / selections needing xcor and ycor
@@ -209,16 +219,16 @@ public class Woo
 	int xcor, ycor;
 	
 	System.out.println( "\nThe plant you would like to harvest...");
-	System.out.println( "\n\tis in which row?");
+	System.out.println( "\tis in which row?");
 	xcor = Keyboard.readInt();
 	xcor -= 1; // convert from matrix index to array index
 
-        System.out.println( "\n\tis in which column?");
+        System.out.println( "\tis in which column?");
 	ycor = Keyboard.readInt();
 	ycor -= 1; // convert from matrix index to array index
 
 	if ( f.getCucumber(xcor, ycor) == "x" || f.getCucumber(xcor, ycor) == "o")
-	    System.out.println("\nYou don't have anything planted here!");   // back to main menu, without incrementing weeksElapsed
+	    System.out.println("\nYou don't have anything planted here!");   // back to main menu, w/o incrementing weeksElapsed
 
 	else
 	    f.harvest(xcor, ycor);
@@ -230,24 +240,37 @@ public class Woo
     public static void buyLand()
     {
 	int xcor, ycor;
-	
-	System.out.println( "\nThe plot of land  you would like to buy...");
-	System.out.println( "\n\tis in which row?");
-	xcor = Keyboard.readInt();
-	xcor -= 1; // convert from matrix index to array index
 
-        System.out.println( "\n\tis in which column?");
-	ycor = Keyboard.readInt();
-	ycor -= 1; // convert from matrix index to array index
-
-	if ( !(f.getCucumber(xcor, ycor) == "x") )
+	if (u.getMoney() >= 100)   // has enough money?
 	    {
-		if ( xcor > f.size() || ycor > f.size() )
-		    System.out.println( "\nThis plot of land does not exist in the world!");
-		else
-		    System.out.println( "You already own this plot of land!");
+		System.out.println( "\nThe plot of land  you would like to buy...");
+		System.out.println( "\n\tis in which row?");
+		xcor = Keyboard.readInt();
+		xcor -= 1; // convert from matrix index to array index
 
-	    } // end if
+		System.out.println( "\n\tis in which column?");
+		ycor = Keyboard.readInt();
+		ycor -= 1; // convert from matrix index to array index
+
+		if ( !(f.getCucumber(xcor, ycor) == "x") )
+		    {
+			if ( xcor > f.size() || ycor > f.size() )
+			    System.out.println( "\nThis plot of land does not exist in the world!");
+			else
+			    System.out.println( "You already own this plot of land!");
+
+		    } // end if
+
+		else
+		    {
+			u.setMoney( u.getMoney() - 100 );
+			System.out.println("\nPurchase successful! $100 has been deducted.");
+		    }
+	    }
+
+	else
+	    System.out.println("\nYou don't have enough money!");   // back to main menu, w/o incrementing weeksElapsed
+	
 	
     } // end buyLand method
     
@@ -273,7 +296,8 @@ public class Woo
     public static void printStats()
     {
 	System.out.println(f);
-	System.out.println( "\n\nYou have $" + u.getMoney() );
+	System.out.println( "You have $" + u.getMoney() + ".");
+        System.out.println( "\nThere are " + (15 - weeksElapsed) + " weeks left in the game.\n");
     } // end showStats method
 
 
@@ -284,6 +308,7 @@ public class Woo
 	f = new Farm(5);
 	
 	startGame();
+	
 	while ( weeksElapsed < 15 &&
 		u.getMoney() > 0     )
 	    playGame();
