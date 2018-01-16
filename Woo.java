@@ -62,8 +62,9 @@ public class Woo
 	s =  "\n" + name + ", what is your next step?\n";
 	s += "\t1: Buy a seed and plant it!\n";
 	s += "\t2: Harvest a cucumber!\n";
-	s += "\t3: Buy a plot of land for $100!\n";
-	s += "\t4: Start next week!\n";
+	s += "\t3: See more about Cucumbers!\n";
+	s += "\t4: Buy a plot of land for $100!\n";
+	s += "\t5: Start next week!\n";
 
 	System.out.println(s);
 		
@@ -77,9 +78,12 @@ public class Woo
 	    harvest();
 
 	else if (selection == 3)
-	    buyLand();
+	    printCucumberInfo();
 	
 	else if (selection == 4)
+	    buyLand();
+	
+	else if (selection == 5)
 	    {
 		weeksElapsed++;
 		for ( int r = 1; r < f.size()+1; r++)  // Matrix.java converts from matrix index --> array index
