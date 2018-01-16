@@ -26,7 +26,7 @@ public class Farm extends Matrix{
   }
     
   public Object getCucumber(int r, int c){ //calls on Matrix's get method to implement GetCucumber
-    return get(r,c);
+      return get(r,c);
   }
     
   public void plant(int r, int c, Object O){//calls on Matrix's set method to implement setCucumber
