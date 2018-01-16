@@ -20,7 +20,7 @@ public class Woo
 	s += "\nWhat is your name, dearest Farmer?";
 	System.out.println(s);
 	
-	name = Keyboard.readString();
+	name = Keyboard.readString();   // user input for username
 	System.out.println("\nHello, " + name + ".\n");
 
 	s = "\n\n~~~ HOW TO PLAY ~~~";
@@ -44,7 +44,7 @@ public class Woo
 
 	s += "\n\nGood luck.";
 
-	System.out.println(s);
+	System.out.println(s);  // print tutorial
 	
     } // end startGame method
 
@@ -57,7 +57,7 @@ public class Woo
 
 	System.out.println("\n\n===================================\n\n");
 	
-        printStats();
+        printStats();  // print farm & how much money you have
 		
 	s =  "\n" + name + ", what is your next step?\n";
 	s += "\t1: Buy a seed and plant it!\n";
@@ -66,12 +66,12 @@ public class Woo
 	s += "\t4: Buy a plot of land for $100!\n";
 	s += "\t5: Start next week!\n";
 
-	System.out.println(s);
+	System.out.println(s);  // print options
 		
-	selection = Keyboard.readInt();
+	selection = Keyboard.readInt(); // user input for options
 
 
-	if (selection == 1)
+	if (selection == 1) // if user selected 1 ...
 	    plant();
 
 	else if (selection == 2)
@@ -83,7 +83,8 @@ public class Woo
 	else if (selection == 4)
 	    buyLand();
 	
-	else if (selection == 5)
+	
+	else if (selection == 5) // user chose to start next week
 	    {
 		weeksElapsed++;
 		for ( int r = 1; r < f.size()+1; r++)  // Matrix.java converts from matrix index --> array index
@@ -97,8 +98,9 @@ public class Woo
 			    } // end inner for-loop
 		    } // end outer for-loop
 	    }
-	// increment weeksElapsed, and back to main menu
+	// increment weeksElapsed, back to main menu
 
+	
 	else
 	    System.out.println("\nFollow directions!");
 	// back to main menu, without incrementing weeksElapsed
@@ -158,13 +160,13 @@ public class Woo
 
 	System.out.println(s);
 
-	selection = Keyboard.readInt();
+	selection = Keyboard.readInt();  // user input for plant selection
 
 	if (selection == 1 || selection == 2 || selection == 3 ||
 	    selection == 4 || selection == 5)
 	    {
-		if ( (selection == 1 && u.getMoney() < 30) ||
-		     (selection == 2 && u.getMoney() < 3 ) ||
+		if ( (selection == 1 && u.getMoney() < 30) ||  // does user have enough money
+		     (selection == 2 && u.getMoney() < 3 ) ||  // to plant selected plant?
 		     (selection == 3 && u.getMoney() < 50) ||
 		     (selection == 4 && u.getMoney() < 10) ||
 		     (selection == 5 && u.getMoney() < 20)     )
@@ -181,7 +183,7 @@ public class Woo
 		System.out.println(s);
 		ycor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
-		if ( xcor > f.size() || ycor > f.size() )
+		if ( xcor > f.size() || ycor > f.size() )  // if selected plot of land out of bounds
 		    {
 			System.out.println( "\nThis plot of land does not exist in the world!");
 			return;   // back to main menu, without incrementing weeksElapsed
@@ -199,7 +201,7 @@ public class Woo
 
 		
 		// if you arrive here, xcor and ycor in bounds of world,
-		// and f.getCucumber(xcor, ycor) is not "X"
+		//                     and f.getCucumber(xcor, ycor) is not "X"
 		// ... if not "O", means cucumber is planted in selected plot
 		else if ( !( f.getCucumber(xcor, ycor).equals("O") )    )
 		    {
@@ -209,7 +211,7 @@ public class Woo
 
 
 		
-		if (selection == 1)
+		if (selection == 1) // selected to plant an Armenian Cucumber ...
 		    {
 			Cucumber c = new Armenian();
 			f.plant(xcor, ycor, c);
@@ -256,13 +258,15 @@ public class Woo
 
 	    } // end selections 1-5 / selections needing xcor and ycor
 
-	else if (selection == 6)
+	
+	else if (selection == 6) // see Cucumber info
 	    {
 		printCucumberInfo();
 		// back to main menu, without incrementing weeksElapsed
 	    }
 
-	else
+	
+	else  // selection not in [1,6]
 	    {
 		System.out.println("\nFollow directions!");
 		// back to main menu, without incrementing weeksElapsed
@@ -283,6 +287,7 @@ public class Woo
         System.out.println( "\tis in which column?");
 	ycor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
+	
 	if ( xcor > f.size() || ycor > f.size() )
 	    System.out.println( "\nThis plot of land does not exist in the world!");
 	// back to main menu, without incrementing weeksElapsed
@@ -294,7 +299,7 @@ public class Woo
 	else
 	    {
 		u.setMoney( u.getMoney() + f.harvest(xcor, ycor) );
-		// harvest() returns the value of plant being harvested
+		// harvest() in Farm.java returns the value of plant being harvested
 		// resets plot to "O" and adds money to user's bank
 	    }
 	
@@ -307,7 +312,7 @@ public class Woo
     {
 	int xcor, ycor;
 
-	if (u.getMoney() >= 100)   // has enough money?
+	if (u.getMoney() >= 100)   // has enough money to buy land?
 	    {
 		System.out.println( "\nThe plot of land you would like to buy...");
 		System.out.println( "\tis in which row?");
@@ -334,7 +339,8 @@ public class Woo
 	    }
 
 	else
-	    System.out.println("\nYou don't have enough money!");   // back to main menu, w/o incrementing weeksElapsed
+	    System.out.println("\nYou don't have enough money!");
+	// back to main menu, w/o incrementing weeksElapsed
 	
 	
     } // end buyLand method
@@ -343,10 +349,12 @@ public class Woo
     
     public static void endGame()
     {
-	if ( !(weeksElapsed < 15) )
+	System.out.println("\n\n===================================\n\n");
+	
+	if ( !(weeksElapsed < 15) )  // if game ended b/c 15 weeks elapsed, print following msg
 	    System.out.println("\nTime's up! Your time as a Farmer is over.");
 
-	else if ( !( u.getMoney() > 0) )
+	if ( !( u.getMoney() > 0) ) // if game ended b/c no money left, print following msg
 	    System.out.println("\nYou ran out of money! Probably better to run a farm in a Communist country instead.");
 
 	System.out.println("\nHere is the final resting state of your farm:\n");
@@ -375,10 +383,11 @@ public class Woo
 	startGame();
 	
 	while ( weeksElapsed < 15 &&
-		u.getMoney() > 0     )
+		u.getMoney() > 0     )  // keep game running
 	    playGame();
-	// does not update weeksElapsed b/c will be updated when chosen by user
+	// does not update weeksElapsed here b/c will be updated when chosen by user
 
+	// reach here when while-loop conditions not met
 	endGame();
 	
     } // end main method
