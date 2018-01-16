@@ -34,11 +34,6 @@ public class Farm extends Matrix{
   }
     
   public int harvest(int r, int c){
-    if (getCucumber(r,c).equals("O")){
-      System.out.println("You selected an open space instead of a cucumber. Select again please.");
-        return 0;
-      }
-    
     String s = new String("O");
     Cucumber C = (Cucumber)getCucumber(r,c);
     int retMoney = C.value;
