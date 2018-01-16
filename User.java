@@ -7,7 +7,7 @@ public class User
     public User()
     {
 	name = "";
-	money = 30;
+	money = 50;
     }
     public User(String n)
     {

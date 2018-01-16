@@ -266,28 +266,25 @@ public class Woo
 
 	if (u.getMoney() >= 100)   // has enough money?
 	    {
-		System.out.println( "\nThe plot of land  you would like to buy...");
-		System.out.println( "\n\tis in which row?");
-		xcor = Keyboard.readInt();
-		xcor -= 1; // convert from matrix index to array index
+		System.out.println( "\nThe plot of land you would like to buy...");
+		System.out.println( "\tis in which row?");
+		xcor = Keyboard.readInt(); // converting from matrix index to array index handled in Matrix.java
 
-		System.out.println( "\n\tis in which column?");
-		ycor = Keyboard.readInt();
-		ycor -= 1; // convert from matrix index to array index
+		System.out.println( "\tis in which column?");
+		ycor = Keyboard.readInt(); // converting from matrix index to array index handled in Matrix.java
+		
+		if ( xcor > f.size() || ycor > f.size() )
+		    System.out.println( "\nThis plot of land does not exist in the world!");
 
-		if ( !(f.getCucumber(xcor, ycor).equals("X")) )
-		    {
-			if ( xcor > f.size() || ycor > f.size() )
-			    System.out.println( "\nThis plot of land does not exist in the world!");
-			else
-			    System.out.println( "You already own this plot of land!");
-
-		    } // end if
+		
+		else if ( !(f.getCucumber(xcor, ycor).equals("X")) )   // xcor, ycor within bounds of array
+		    System.out.println( "\nYou already own this plot of land!");
 
 		else
 		    {
 			u.setMoney( u.getMoney() - 100 );
 			System.out.println("\nPurchase successful! $100 has been deducted.");
+			f.plant(xcor, ycor, "O");
 		    }
 	    }
 
