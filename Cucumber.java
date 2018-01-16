@@ -33,16 +33,7 @@ public class Cucumber
 	if (value < 0)
 	    value = 0;
     }
-    /*	
-    public int getNutrition()
-    { return nutrition; }
-
-    public int getRipeDuration()
-    { return ripeDuration; }
-
-    public int getValue()
-    { return value; }
-    */
+ 
     public String toString()
     { return name + value; }
     

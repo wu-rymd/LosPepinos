@@ -40,12 +40,5 @@ public class Farm extends Matrix{
     set(r,c,s);
     return retMoney;
   }
-    
-  public static void main(String[] args){
-    Farm F = new Farm();
-    F.plant(1,1,"O");
-    System.out.println(F.get(1,1));
-  }
-    
 
 }

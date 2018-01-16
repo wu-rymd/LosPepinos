@@ -5,7 +5,6 @@ public class User
     
     public User()
     {
-	name = "";
 	money = 50;
     }
 
