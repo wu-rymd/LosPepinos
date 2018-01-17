@@ -6,6 +6,25 @@ LosPepinos
 * Raymond Wu
 * Jerry Ye
 
+# Cucumber
+Superclass for all the species of cucumbers
+
+..*English
+..*Persian
+..*Kirby
+..*Armenian
+..*Japanese
+
+#Woo
+Driver file for our game
+
+#User
+class that creates a user (the player)
+
+#Farm
+extends matrix, comtains the methods that deal with farm interaction
+
+#DO WE NEED ANYTHING BELOW THIS LINE
 
 # General description
 Our final project proposal is to create an in-terminal simulation of cucumber farming. The goal of the game is to generate as much profit as possible in 15 “weeks.” Each week is defined as a stage in the game.
