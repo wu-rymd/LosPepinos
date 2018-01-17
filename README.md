@@ -15,16 +15,16 @@ Superclass for all the species of cucumbers
   * Armenian <br>
   * Japanese <br>
 
-#Woo <br>
+# Woo <br>
 Driver file for our game
 
-#User <br>
+# User <br>
 class that creates a user (the player)
 
-#Farm <br>
+# Farm <br>
 extends matrix, comtains the methods that deal with farm interaction
 <br>
-#DO WE NEED ANYTHING BELOW THIS LINE
+# DO WE NEED ANYTHING BELOW THIS LINE
 
 # General description
 Our final project proposal is to create an in-terminal simulation of cucumber farming. The goal of the game is to generate as much profit as possible in 15 “weeks.” Each week is defined as a stage in the game.
