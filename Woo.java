@@ -55,6 +55,9 @@ public class Woo
 	String s;
 	int selection;
 
+	System.out.println("\nPress SPACE then ENTER to continue...");
+	String nextStep = Keyboard.readString();
+
 	System.out.println("\n\n===================================\n\n");
 	
         printStats();  // print farm & how much money you have
@@ -141,6 +144,8 @@ public class Woo
 
 	System.out.println( cucumberInfo);
 
+	
+
     } // end printCucumberInfo method
 
     
@@ -184,7 +189,7 @@ public class Woo
 		ycor = Keyboard.readInt();  // converting from matrix index to array index handled by Matrix.java
 
 		if ( xcor > f.size() || ycor > f.size() ||
-		     xcor < 0        || ycor < 0            )  // if selected plot of land out of bounds
+		     xcor <= 0       || ycor <= 0            )  // if selected plot of land out of bounds
 		    {
 			System.out.println( "\nThis plot of land does not exist in the world!");
 			return;   // back to main menu, without incrementing weeksElapsed
@@ -290,7 +295,7 @@ public class Woo
 
 	
 	if ( xcor > f.size() || ycor > f.size() ||
-	     xcor < 0        || ycor < 0             )   // chosen plot in bounds?
+	     xcor <= 0       || ycor <= 0             )   // chosen plot in bounds?
 	    System.out.println( "\nThis plot of land does not exist in the world!");
 	// back to main menu, without incrementing weeksElapsed
 	
@@ -300,9 +305,14 @@ public class Woo
 
 	else
 	    {
+		int oldMoney = u.getMoney();
 		u.setMoney( u.getMoney() + f.harvest(xcor, ycor) );
 		// harvest() in Farm.java returns the value of plant being harvested
 		// resets plot to "O" and adds money to user's bank
+
+		System.out.println("\nYou earned $" + ( u.getMoney() - oldMoney ) + "!");
+
+		
 	    }
 	
 	
@@ -324,7 +334,7 @@ public class Woo
 		ycor = Keyboard.readInt(); // converting from matrix index to array index handled in Matrix.java
 		
 		if ( xcor > f.size() || ycor > f.size() ||
-		     xcor < 0        || xcor < 0           )
+		     xcor <= 0       || xcor <= 0           )
 		    System.out.println( "\nThis plot of land does not exist in the world!");
 		// back to main menu, without incrementing weeksElapsed
 

@@ -34,10 +34,9 @@ public class Farm extends Matrix{
   }
     
   public int harvest(int r, int c){
-    String s = new String("O");
-    Cucumber C = (Cucumber)getCucumber(r,c);
+    Cucumber C = (Cucumber) getCucumber(r,c);
     int retMoney = C.value;
-    set(r,c,s);
+    set(r,c,"O");
     return retMoney;
   }
 
