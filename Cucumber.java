@@ -25,17 +25,18 @@ public class Cucumber
     
     public void grow()
     {
-	ripeDuration -= 1;
-	if (ripeDuration >= 0)
-	    value += nutrition;
+	ripeDuration -= 1;//decreases the ripeDuraiton by 1
+	if (ripeDuration >= 0)//if the cucmber hasn't reached its ripeness yet
+	    value += nutrition;//increase its value
 	else
-	    value -= nutrition;
-	if (value < 0)
+	    value -= nutrition;//decrease its value, since overripped and rotting
+	if (value < 0)//prevents the value from becoming negative
 	    value = 0;
     }
  
     public String toString()
     { return name + ripeDuration; }
+    //in the farm plot, cucumber is shown by its name and its ripeDuration
     
 }
     
