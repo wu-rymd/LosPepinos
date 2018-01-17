@@ -25,14 +25,14 @@ Superclass for all the species of cucumbers
 	   * ripeDuration = 4
     
   * Armenian <br>
-	   * name = "Ar"
-	   * nutrition = 20
-	   * ripeDuration = 5
+  	* name = "Ar"
+	* nutrition = 20
+	* ripeDuration = 5
     
   * Japanese <br>
-    	   * name = "Jp"
-	   * nutrition = 25
-	   * ripeDuration = 6
+  	* name = "Jp"
+	* nutrition = 25
+	* ripeDuration = 6
 
 # Woo <br>
 Driver file for our game
