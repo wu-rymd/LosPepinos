@@ -33,7 +33,7 @@ public class Farm extends Matrix{
     set(r, c, O);
   }
     
-  public int harvest(int r, int c){
+  public int harvest(int r, int c){//sets Object at row r and column c to an empty space and returns the int value of the old cucumber in that space
     Cucumber C = (Cucumber) getCucumber(r,c);
     int retMoney = C.value;
     set(r,c,"O");
