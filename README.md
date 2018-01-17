@@ -9,11 +9,11 @@ LosPepinos
 # Cucumber
 Superclass for all the species of cucumbers
 
-..*English
-..*Persian
-..*Kirby
-..*Armenian
-..*Japanese
+..*English <br>
+..*Persian <br>
+..*Kirby <br>
+..*Armenian <br>
+..*Japanese <br>
 
 #Woo
 Driver file for our game
