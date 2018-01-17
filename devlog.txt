@@ -24,7 +24,7 @@ COOL STUFF LEARNED
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We eliminated starting with 2 pre-chosen seeds because it would give less iterty to the user.
+We eliminated starting with 2 pre-chosen seeds because it would give less liberty to the user.
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
