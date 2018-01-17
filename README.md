@@ -40,7 +40,7 @@ Dictates how cucumbers grow and how each cucumber will be represented in the far
 Driver file for our game. To run our game: 
 1. Clone the repo 
 
-$ git clone https://github.com/LosPepinos
+`$ git clone https://github.com/raywu6/LosPepinos.git`
 
 2. Compile Woo.java
 
