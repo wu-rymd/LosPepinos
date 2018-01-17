@@ -11,16 +11,19 @@ Cucumber Farm
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-cannot hold the name of a class in a variable, overcame by using if statements.
+- Cannot hold the name of a class in a variable, overcame by using if statements for each Cucumber
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-none that we are aware of.
+- Should be none
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - You cannot hold the name of a class in a variable.
-    When you try to use a variable to hold a class, the compiler will treat the variable itself as the class name.
+  When you try to use a variable to hold a class, the compiler will treat the variable itself as the class name.
+- TA CLei helped us learn that the user can input a string like "0 0" in a Keyboard.readInt() prompt 
+  and that the first int would be used right away, while the others would be stored in a "buffer," or
+  temporary memory space, and will be used at the next readInt() prompt.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,7 +31,7 @@ We eliminated starting with 2 pre-chosen seeds because it would give less libert
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-update uml, devlog, readme, flowchart as often as you update the code.
+Update UML, devlog, readme, flowchart as often as you update the code.
 
 
  ______   ______   __   __   __       ______   _______     
@@ -43,8 +46,8 @@ update uml, devlog, readme, flowchart as often as you update the code.
 
 2018-01-16
 --------------------------------------------------------------
-Kerwin Chen :: collectively finished up the project
-Raymond Wu  :: collectively finished up the project
+Kerwin Chen :: collectively finished up the project, updated comments to code
+Raymond Wu  :: collectively finished up the project, added "Press SPACE then ENTER to continue", updated flowchart
 Jerry Ye    :: collectively finished up the project
 ==============================================================
 

@@ -30,8 +30,9 @@ public class Woo
 	s += "\nThe goal of the game is to make as much money as possible in 15 weeks.";
 
 	s += "\n\nYou can buy seeds to plant on your own farm.";
-	s += "\nUnplanted land that you own are marked with \"O\".";
-	s += "\nLand you do not own are marked with \"X\". Plant here = $50 penalty!";
+	s += "\nUnplanted land that you own is marked with \"O.\"";
+	s += "\nLand you do not own is marked with \"X.\" Plant here = $50 penalty!";
+	s += "\nThe first row has row number 1; the second, 2; and so on. Same for columns.";
 
 	s += "\n\nMore info on types of cucumbers by selecting See more.";
 	s += "\nCucumbers increase by an increment designated as \"nutrition\".";
@@ -62,7 +63,7 @@ public class Woo
 	
         printStats();  // print farm & how much money you have
 		
-	s =  "\n" + name + ", what is your next step?\n";
+	s =  "\n" + name + ", what is your next step? Choose wisely.\n";
 	s += "\t1: Buy a seed and plant it!\n";
 	s += "\t2: Harvest a cucumber!\n";
 	s += "\t3: See more about Cucumbers!\n";

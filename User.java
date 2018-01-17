@@ -5,7 +5,7 @@ public class User
     
     public User()
     {
-	money = 150;
+	money = 50;
     }
 
     public int getMoney(){
