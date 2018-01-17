@@ -44,11 +44,11 @@ $ git clone https://github.com/LosPepinos
 
 2. Compile Woo.java
 
-$  javac Woo.java
+`$ javac Woo.java`
 
 3. Run Woo
 
-$ java Woo
+`$ java Woo`
 
 4. Follow the in-terminal user prompts given to you. 
 
