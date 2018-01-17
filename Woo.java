@@ -157,11 +157,11 @@ public class Woo
 	int selection, xcor, ycor;
 
 	s =  "\n" + name + ", what type of cucumber would you like to plant?\n";
-	s += "\t1: Armenian\n";
-	s += "\t2: English\n";
-	s += "\t3: Japanese\n";
-	s += "\t4: Kirby\n";
-	s += "\t5: Persian\n";
+	s += "\t1: Armenian (for $30)\n";
+	s += "\t2: English  (for $ 3)\n";
+	s += "\t3: Japanese (for $50)\n";
+	s += "\t4: Kirby    (for $10)\n";
+	s += "\t5: Persian  (for $20)\n";
 	s += "\t6: See more info about Cucumbers!\n";
 
 	System.out.println(s);
