@@ -15,12 +15,12 @@ Superclass for all the species of cucumbers
 	   * ripeDuration = 2
     
   * Kirby <br>
-    * name = "Kr"
+    	   * name = "Kr"
 	   * nutrition = 10
 	   * ripeDuration = 3
     
   * Persian <br>
-    * name = "Pr"
+    	   * name = "Pr"
 	   * nutrition = 15
 	   * ripeDuration = 4
     
@@ -30,7 +30,7 @@ Superclass for all the species of cucumbers
 	   * ripeDuration = 5
     
   * Japanese <br>
-    * name = "Jp"
+    	   * name = "Jp"
 	   * nutrition = 25
 	   * ripeDuration = 6
 
